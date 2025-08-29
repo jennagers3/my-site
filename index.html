@@ -14,7 +14,6 @@
       --accent-4:#ffcf4d;
     }
 
-    /* Background gradient */
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -27,11 +26,10 @@
       overflow-x: hidden;
     }
 
-    /* Layout */
     .wrap{
       max-width: 860px;
       padding: 28px 20px 80px;
-      margin-left: 32px;         /* keeps content toward the left */
+      margin-left: 32px;        
     }
 
     header{
@@ -42,7 +40,6 @@
       margin-bottom: 14px;
     }
 
-    /* Profile image (circle) */
     .avatar{
       width: 96px;
       height: 96px;
@@ -89,7 +86,6 @@
     }
     .btn:hover{ transform: translateY(-2px); }
 
-    /* Card section */
     .card{
       background: var(--paper);
       border: 1px solid rgba(0,0,0,.06);
@@ -104,11 +100,11 @@
     }
     ul{ margin: 10px 0 6px 20px; }
 
-    /* Floating flowers canvas (behind content) */
+
     .garden{
       position: fixed;
       inset: 0;
-      z-index: -1;               /* behind everything */
+      z-index: -1;
       pointer-events: none;
       overflow: hidden;
     }
@@ -121,7 +117,7 @@
       animation: floatUp linear infinite;
     }
 
-    /* Reduce/disable for users who prefer less motion */
+
     @media (prefers-reduced-motion: reduce){
       .flower{ animation: none; }
     }
@@ -131,31 +127,31 @@
       to  { transform: translateY(-15vh) rotate(360deg); }
     }
 
-    /* footer */
+
     footer{ margin-top: 28px; font-size: 14px; opacity: .7; }
   </style>
 </head>
 <body>
-  <!-- Animated flower layer -->
+
   <div class="garden" id="garden" aria-hidden="true"></div>
 
   <main class="wrap">
     <header>
-      <!-- Put your photo in the repo as me.jpg (or change the filename) -->
+
       <img class="avatar" src="jenna2.png" alt="Photo of mee">
       <div>
-        <h1>Jenna Gers ✨</h1>
+        <h1>Jenna Gers</h1>
         <span class="tag"> Computer Science student at Clemson University 😊</span>
       </div>
     </header>
 
     <p>
-      Hi! I enjoy programming, math, and solving the NYT puzzles. 🌷
+      Hi! I enjoy programming, math, data/ analytics and solving the NYT puzzles. 🌷
     </p>
 
     <div class="links">
-      <!-- Replace hrefs with your real links -->
-      <a class="btn alt" href="Jenna Gers Resume(3).docx (2).pdf"target="_blank">Resume</a>
+
+      <a class="btn alt" href="Jenna_Gers Resume.docx (1).pdf"target="_blank">Resume</a>
     </div>
 
     <section class="card">
