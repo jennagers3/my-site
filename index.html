@@ -129,6 +129,19 @@
 
 
     footer{ margin-top: 28px; font-size: 14px; opacity: .7; }
+
+  #mini-time-box {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+    
   </style>
 </head>
 <body>
@@ -170,7 +183,14 @@
       <p>Email(School): <a href="mailto:jgers@g.clemson.edu">jgers@g.clemson.edu</a></p>
     </section>
 
+    <section class="card">
+  <h2>Mini Crossword 🧠</h2>
+  <p>My time for <span id="mini-date"></span>:</p>
+  <div id="mini-time-box">01:48</div>
+</section>
+
     <footer>© <span id="year"></span> Jenna Gers</footer>
+
   </main>
 
   <script>
@@ -234,6 +254,14 @@
     // Create N flowers (increase if you want denser garden)
     const N = 22;
     for(let i=0;i<N;i++) addFlower();
+
+  document.getElementById('mini-date').textContent = new Date().toLocaleDateString(undefined, {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric'
+});
+    
   </script>
 </body>
 </html>
